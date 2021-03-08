@@ -45,7 +45,7 @@ function fillcolor(){
 let test = document.querySelectorAll('.cell');
 
 test.forEach((div) => {
-    div.addEventListener('ontouchmove',() =>{
+    div.addEventListener('ontouchend',() =>{
         div.style.backgroundColor = randomColor();
     })
 })
