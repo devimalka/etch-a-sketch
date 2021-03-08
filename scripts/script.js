@@ -3,7 +3,6 @@ function fillgrid(size){
     container.setAttribute('style',`grid-template-columns:repeat(${size},1fr);grid-template-rows:repeat(${size},1fr)`);
     for(let i=1;i<=size*size;i++){
         let div = document.createElement('div');
-        //div.textContent = i;
         div.classList.add('cell');
         container.appendChild(div);
 
@@ -43,12 +42,6 @@ button.addEventListener('click',()=>{
 
 function fillcolor(){
 let test = document.querySelectorAll('.cell');
-
-test.forEach((div) => {
-    div.addEventListener('ontouchend',() =>{
-        div.style.backgroundColor = randomColor();
-    })
-})
 
 test.forEach((div) => {
     div.addEventListener('mouseover',() =>{

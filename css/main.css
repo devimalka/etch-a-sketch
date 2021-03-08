@@ -1,11 +1,12 @@
 
 
 .container {
-    height: 50em;
-    width: 50em;
+    height: 45em;
+    width: 45em;
     display: grid;
     border: 1px solid black;
     margin: 0 auto 0 auto;
+    
 
 }
 
