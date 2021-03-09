@@ -31,9 +31,13 @@ function randomColor(){
 function randomFill(){
     fillgrid(16);
     let all = document.querySelectorAll('.cell');
+    for(let i=0;i<all.length;i++){
+        
+    }
     let i =0;
     while(i<all.length){
         let item  = all[Math.floor(Math.random() * all.length)];
+        TransitionEvent
         item.style.backgroundColor = randomColor();
         i++
     }
