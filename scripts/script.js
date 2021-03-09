@@ -45,9 +45,17 @@ let button = document.querySelector("#size");
 
 button.addEventListener('click',()=>{
     let size = parseInt(prompt("enter size"));
+    if(size>=64||size<=1){
+        size = parseInt(prompt("Enter valid value"));
+        clearGrids();
+        fillgrid(size);
+        fillcolor();
+    }
+    else{
     clearGrids();
     fillgrid(size);
     fillcolor();
+    }
 })
 
 
