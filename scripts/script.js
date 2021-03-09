@@ -28,7 +28,18 @@ function randomColor(){
     return color;
 }
 
-fillgrid(16);
+function randomFill(){
+    fillgrid(16);
+    let all = document.querySelectorAll('.cell');
+    let i =0;
+    while(i<all.length){
+        let item  = all[Math.floor(Math.random() * all.length)];
+        item.style.backgroundColor = randomColor();
+        i++
+    }
+    
+}
+randomFill();
 
 let button = document.querySelector("#size");
 
@@ -50,5 +61,14 @@ test.forEach((div) => {
 })
 
 }
+
+let clear = document.getElementById('clear');
+
+clear.addEventListener('click',() =>{
+    clearGrids();
+    fillgrid(16);
+    fillcolor();
+})
+
 
 fillcolor();
